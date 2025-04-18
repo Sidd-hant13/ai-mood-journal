@@ -1,0 +1,16 @@
+.home-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.home-container h1 {
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.home-container p {
+  color: #4a5568;
+  font-size: 1.1rem;
+}
