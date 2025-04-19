@@ -1,0 +1,122 @@
+.add-mood-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px);
+  padding: 2rem;
+}
+
+.mood-form-glass {
+  background: rgba(0, 9, 88, 0.3);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 24px;
+  padding: 3rem;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+  border: 1px solid rgba(74, 107, 238, 0.3);
+  transform-style: preserve-3d;
+}
+
+.form-title {
+  color: var(--text-light);
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.form-subtitle {
+  color: rgba(248, 249, 250, 0.8);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.form-group {
+  margin-bottom: 2.5rem;
+}
+
+.form-group label {
+  display: block;
+  color: var(--text-light);
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.form-group textarea {
+  width: 100%;
+  padding: 1.2rem;
+  border: none;
+  border-radius: 16px;
+  background: rgba(248, 249, 250, 0.9);
+  font-family: inherit;
+  font-size: 1rem;
+  resize: none;
+  transition: all 0.3s ease;
+}
+
+.form-group textarea:focus {
+  outline: none;
+  background: var(--text-light);
+  box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.5);
+}
+
+.submit-btn {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 1.2rem;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(45deg, var(--primary), var(--accent));
+  color: var(--text-light);
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(67, 97, 238, 0.3);
+}
+
+.submit-btn.disabled {
+  background: rgba(255, 255, 255, 0.2);
+  cursor: not-allowed;
+}
+
+.btn-liquid {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: var(--primary);
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.submit-btn:hover:not(:disabled) .btn-liquid {
+  top: -120px;
+}
+
+.spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--text-light);
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

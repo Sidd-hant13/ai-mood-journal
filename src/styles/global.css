@@ -1,11 +1,65 @@
-/* Modern CSS Reset */
-* {
+:root {
+  --primary: #4361ee; 
+  --secondary: #3a0ca3; 
+  --accent: #4cc9f0; 
+  --text-light: #f8f9fa;
+  --text-dark: #212529;
+}
+
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  line-height: 1.6;
+.app-background {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  background-attachment: fixed;
+}
+
+.app-blur-layer {
+  min-height: 100vh;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.app-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+* {
+  transition: all 0.3s ease-out;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 9, 88, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 4px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
 }

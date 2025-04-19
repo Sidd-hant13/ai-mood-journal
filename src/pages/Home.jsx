@@ -1,11 +1,15 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import './Home.css';
+
 const Home = () => {
   return (
-    <main className="home-container">
-      <h1>Welcome to MoodTracker</h1>
-      <p>Start tracking your emotions today</p>
-    </main>
+    <div className="home-container">
+      <div className="hero-section">
+        <h1>Welcome to MoodSphere</h1>
+        <p>Track your emotions with beautiful analytics</p>
+        <Link to="/add-mood" className="cta-button">Log Your First Mood</Link>
+      </div>
+    </div>
   );
 };
 

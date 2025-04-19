@@ -1,12 +1,38 @@
 .navbar {
-  padding: 1rem;
-  background: #6e8efb;
-  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: rgba(0, 9, 88, 0.3);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(74, 107, 238, 0.3);
 }
 
 .navbar-brand {
-  color: white;
-  text-decoration: none;
+  color: var(--text-light);
+  font-size: 1.5rem;
   font-weight: 600;
-  font-size: 1.2rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: rgba(248, 249, 250, 0.8);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+}
+
+.nav-link:hover {
+  color: var(--text-light);
+  background: rgba(74, 107, 238, 0.3);
 }
