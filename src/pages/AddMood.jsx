@@ -16,7 +16,6 @@ const AddMood = () => {
     setIsSubmitting(true);
     addMood({ mood, note });
     
-    // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 1000));
     
     setMood('');
